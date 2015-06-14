@@ -12,8 +12,8 @@ input {
 output {
 
 	http {
-		content_type => "application/json"
-		http_method => "post"
+		format => "json"
+		http_method => "put"
 		url => "<%= ENV['OPENSHIFT_LOGSTASH_ES_URL'] %>"
 		verify_ssl => false
 	}
