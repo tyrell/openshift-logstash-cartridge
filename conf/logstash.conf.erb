@@ -11,11 +11,11 @@ input {
 
 output {
 
-	http {
-		format => "json"
-		http_method => "put"
-		url => "<%= ENV['OPENSHIFT_LOGSTASH_ES_URL'] %>"
-		verify_ssl => false
-	}
+	elasticsearch {
+		codec => "json"
+		host => "elasticsearch-symphonyelk.codemesa.telstra.com"
+		port => "80"
+		protocol "http"
+  	}
 
 }
